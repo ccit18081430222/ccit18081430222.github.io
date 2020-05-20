@@ -1149,6 +1149,7 @@ pre .javascript .function {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
+  transition: 2s all;
 }
 .site-author-name {
   color: var(--text-color);
@@ -1176,7 +1177,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #4affd5;
+  background: #536154;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
