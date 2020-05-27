@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://青青的本丸.github.io/"/>
-  <updated>2020-05-27T07:16:48.322Z</updated>
+  <updated>2020-05-27T07:29:10.011Z</updated>
   <id>https://青青的本丸.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>手把手教你搭建自己的hexo+GitHub博客</title>
-    <link href="https://青青的本丸.github.io/2020/05/20/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    <id>https://青青的本丸.github.io/2020/05/20/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</id>
-    <published>2020-05-20T13:05:39.000Z</published>
-    <updated>2020-05-27T07:16:48.322Z</updated>
+    <title>博客美化</title>
+    <link href="https://青青的本丸.github.io/2020/05/27/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/"/>
+    <id>https://青青的本丸.github.io/2020/05/27/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/</id>
+    <published>2020-05-27T07:20:46.000Z</published>
+    <updated>2020-05-27T07:29:10.011Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,29 @@
       
         &lt;p&gt;&lt;em&gt;视频资源来自哔哩哔哩up主，侵删。&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://b23.tv/Blu7xI&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第一步node安装&lt;/a&gt;&lt;br&gt;a 下载nodejs，并进行安装，
+&lt;li&gt;&lt;a href=&quot;https://b23.tv/GTNMPX&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;next主题使用&lt;/a&gt;&lt;br&gt;a &lt;a href=&quot;https:/
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>手把手教你搭建自己的hexo+GitHub博客</title>
+    <link href="https://青青的本丸.github.io/2020/05/20/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <id>https://青青的本丸.github.io/2020/05/20/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</id>
+    <published>2020-05-20T13:05:39.000Z</published>
+    <updated>2020-05-27T07:27:57.673Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;为记录自己的搭建过程及所用资料，仅供参考。&lt;br&gt;&lt;em&gt;视频资源来自哔哩哔哩up主，侵删。&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://b23.tv/Blu7xI&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;第一步node安装
       
     
     </summary>
