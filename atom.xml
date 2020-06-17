@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://青青的本丸.github.io/"/>
-  <updated>2020-05-27T07:29:10.011Z</updated>
+  <updated>2020-06-17T10:30:31.196Z</updated>
   <id>https://青青的本丸.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>micro:bit蓝牙连接</title>
+    <link href="https://青青的本丸.github.io/2020/06/17/micro-bit%E8%93%9D%E7%89%99%E8%BF%9E%E6%8E%A5/"/>
+    <id>https://青青的本丸.github.io/2020/06/17/micro-bit%E8%93%9D%E7%89%99%E8%BF%9E%E6%8E%A5/</id>
+    <published>2020-06-17T09:37:29.000Z</published>
+    <updated>2020-06-17T10:30:31.196Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;micro-bit-蓝牙初步连接&quot;&gt;&lt;a href=&quot;#micro-bit-蓝牙初步连接&quot; class=&quot;headerlink&quot; title=&quot;micro:bit 蓝牙初步连接&quot;&gt;&lt;/a&gt;micro:bit 蓝牙初步连接&lt;/h2&gt;&lt;p&gt;-第一步打开电脑蓝牙&lt;br&gt;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>博客美化</title>
