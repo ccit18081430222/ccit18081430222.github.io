@@ -20,30 +20,42 @@
     var CONFIG = {"hostname":"xn--qiq212dx0k035aa.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"b2t":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="欢迎来到本丸">
-<meta property="og:type" content="website">
-<meta property="og:title" content="青青的本丸">
-<meta property="og:url" content="https://青青的本丸.github.io/index.html">
+  <meta name="description" content="##如何从源码的角度实现服务与特性##目标实现三个特性  第一步添加单元格，代码如下： 第二步新增函数发现服务与特性a 添加变量，用来表明服务与特性是否存在。b 去官方文档中获取UUID号：c 添加三个变量表示特性本身：(统计服务目前已经发现的数量,特性发现的数量,我们应该发现的数量)d 添加函数用来发现服务与特性，函数代码如下： 新增函数控制单元格改变： 最终结果及完整代码展示123456789">
+<meta property="og:type" content="article">
+<meta property="og:title" content="服务特性">
+<meta property="og:url" content="https://青青的本丸.github.io/2020/06/19/%E6%9C%8D%E5%8A%A1%E7%89%B9%E6%80%A7/index.html">
 <meta property="og:site_name" content="青青的本丸">
-<meta property="og:description" content="欢迎来到本丸">
+<meta property="og:description" content="##如何从源码的角度实现服务与特性##目标实现三个特性  第一步添加单元格，代码如下： 第二步新增函数发现服务与特性a 添加变量，用来表明服务与特性是否存在。b 去官方文档中获取UUID号：c 添加三个变量表示特性本身：(统计服务目前已经发现的数量,特性发现的数量,我们应该发现的数量)d 添加函数用来发现服务与特性，函数代码如下： 新增函数控制单元格改变： 最终结果及完整代码展示123456789">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/06C384B7ACH3MZ1I24214c6c6ab0c907.png">
+<meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/7CRQD8NQ02M0RAH8ZA6353de691c28f4ce1.png">
+<meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/GQT6O64Y1RGT2WH262370836fd7d529d74.png">
+<meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/1IN3EUZ2XRT_IC6QNEB378794c2ecfa0b97.png">
+<meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/T5KJ9OTWD07ZCD251a2ba05ac5676786.png">
+<meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/XFR81VDNO_T0M831F1e885ef4efe3c5016.png">
+<meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/HIU03778D2TFUWA09b17d30fa32541cc.png">
+<meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/VEGYE7GWR099VQEO4AW985aa5635b050066f.png">
+<meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/288R48LVUHDNZ1UYXKZL931e6b38af00325b.png">
+<meta property="article:published_time" content="2020-06-19T06:48:18.000Z">
+<meta property="article:modified_time" content="2020-06-19T07:18:04.994Z">
 <meta property="article:author" content="咸鱼婶婶">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.helloimg.com/images/2020/06/19/06C384B7ACH3MZ1I24214c6c6ab0c907.png">
 
-<link rel="canonical" href="https://青青的本丸.github.io/">
+<link rel="canonical" href="https://青青的本丸.github.io/2020/06/19/%E6%9C%8D%E5%8A%A1%E7%89%B9%E6%80%A7/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>青青的本丸</title>
+  <title>服务特性 | 青青的本丸</title>
   
 
 
@@ -163,9 +175,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -181,10 +194,9 @@
       <meta itemprop="name" content="青青的本丸">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/19/%E6%9C%8D%E5%8A%A1%E7%89%B9%E6%80%A7/" class="post-title-link" itemprop="url">服务特性</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          服务特性
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -222,7 +234,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>##如何从源码的角度实现服务与特性<br>##目标实现三个特性<br><img src="https://www.helloimg.com/images/2020/06/19/06C384B7ACH3MZ1I24214c6c6ab0c907.png" alt="06C384B7ACH3MZ1I24214c6c6ab0c907.png"></p>
+        <p>##如何从源码的角度实现服务与特性<br>##目标实现三个特性<br><img src="https://www.helloimg.com/images/2020/06/19/06C384B7ACH3MZ1I24214c6c6ab0c907.png" alt="06C384B7ACH3MZ1I24214c6c6ab0c907.png"></p>
 <ul>
 <li>第一步添加单元格，代码如下：<br><img src="https://www.helloimg.com/images/2020/06/19/7CRQD8NQ02M0RAH8ZA6353de691c28f4ce1.png" alt="7CRQD8NQ02M0RAH8ZA6353de691c28f4ce1.png"></li>
 <li>第二步新增函数发现服务与特性<br>a 添加变量，用来表明服务与特性是否存在。<br><img src="https://www.helloimg.com/images/2020/06/19/GQT6O64Y1RGT2WH262370836fd7d529d74.png" alt="GQT6O64Y1RGT2WH262370836fd7d529d74.png"><br>b 去官方文档中获取UUID号：<br><img src="https://www.helloimg.com/images/2020/06/19/1IN3EUZ2XRT_IC6QNEB378794c2ecfa0b97.png" alt="1IN3EUZ2XRT_IC6QNEB378794c2ecfa0b97.png"><br>c 添加三个变量表示特性本身：(统计服务目前已经发现的数量,特性发现的数量,我们应该发现的数量)<br><img src="https://www.helloimg.com/images/2020/06/19/T5KJ9OTWD07ZCD251a2ba05ac5676786.png" alt="T5KJ9OTWD07ZCD251a2ba05ac5676786.png"><br>d 添加函数用来发现服务与特性，函数代码如下：<br><img src="https://www.helloimg.com/images/2020/06/19/XFR81VDNO_T0M831F1e885ef4efe3c5016.png" alt="XFR81VDNO_T0M831F1e885ef4efe3c5016.png"><br><img src="https://www.helloimg.com/images/2020/06/19/HIU03778D2TFUWA09b17d30fa32541cc.png" alt="HIU03778D2TFUWA09b17d30fa32541cc.png"></li>
@@ -230,441 +242,37 @@
 <li>最终结果及完整代码展示<br><img src="https://www.helloimg.com/images/2020/06/19/288R48LVUHDNZ1UYXKZL931e6b38af00325b.png" alt="288R48LVUHDNZ1UYXKZL931e6b38af00325b.png"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt; </span><br><span class="line">        &lt;script&gt;</span><br><span class="line">        var    selected_device;    &#x2F;&#x2F; 保存用户选择的蓝牙设备 </span><br><span class="line">        var    connected_server;    &#x2F;&#x2F; 保存用户连接的蓝牙设备 </span><br><span class="line">        var    connected &#x3D; false;     &#x2F;&#x2F;,保存电脑蓝牙的当前连接状态</span><br><span class="line">        var    services_discovered &#x3D; false; </span><br><span class="line"> </span><br><span class="line">        &#x2F;&#x2F; presence of services and characteristics </span><br><span class="line">        var has_accelerometer_service &#x3D; false; </span><br><span class="line">        var has_accelerometer_data &#x3D; false; </span><br><span class="line">        var has_led_service &#x3D; false;</span><br><span class="line">        var has_led_matrix_state &#x3D; false; </span><br><span class="line">        var has_device_information_service &#x3D; false; </span><br><span class="line">        var has_model_name_string &#x3D; false; </span><br><span class="line"> </span><br><span class="line">        var has_temperature_serivce &#x3D; false;</span><br><span class="line">        var has_temperature &#x3D; false;</span><br><span class="line"> </span><br><span class="line">       &#x2F;&#x2F; service UUIDs </span><br><span class="line">       ACCELEROMETER_SERVICE &#x3D; &#39;e95d0753-251d-470a-a062-fa1922dfa9a8&#39;; </span><br><span class="line">       LED_SERVICE &#x3D; &#39;e95dd91d-251d-470a-a062-fa1922dfa9a8&#39;; </span><br><span class="line">       DEVICE_INFORMATION_SERVICE &#x3D; &#39;0000180a-0000-1000-8000-00805f9b34fb&#39;;</span><br><span class="line"> </span><br><span class="line">       TEMPERATURE_SERVICE &#x3D; &#39;e95d6100-251d-470a-a062-fa1922dfa9a8&#39;;</span><br><span class="line">       &#x2F;&#x2F; characteristic UUIDs </span><br><span class="line">       ACCELEROMETER_DATA &#x3D; &#39;e95dca4b-251d-470a-a062-fa1922dfa9a8&#39;; </span><br><span class="line">       LED_MATRIX_STATE  &#x3D; &#39;e95d7b77-251d-470a-a062-fa1922dfa9a8&#39;; </span><br><span class="line">       MODEL_NUMBER_STRING &#x3D; &#39;00002a24-0000-1000-8000-00805f9b34fb&#39;; </span><br><span class="line"> </span><br><span class="line">       TEMPERATURE &#x3D; &#39;e95d9250-251d-470a-a062-fa1922dfa9a8&#39;;</span><br><span class="line">       &#x2F;&#x2F; cached characteristics </span><br><span class="line">        var led_matrix_state; </span><br><span class="line">        var model_number_string;</span><br><span class="line">        var accelerometer_data; </span><br><span class="line">        var temperature;</span><br><span class="line"> </span><br><span class="line">         &#x2F;&#x2F;</span><br><span class="line">         var service_count;</span><br><span class="line">         var services_discovered;</span><br><span class="line">         var characteristics_discovered;  </span><br><span class="line">         var characteristic_count ; </span><br><span class="line">        function discoverOrdisconnectDevices() </span><br><span class="line">        &#123;</span><br><span class="line">            console.log(&quot;discoverDevicesOrDisconnect&quot;); </span><br><span class="line">            if (!connected)</span><br><span class="line">                discoverDevices();</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                selected_device.gatt.disconnect();</span><br><span class="line">            &#125;</span><br><span class="line"> </span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        function onDisconnected()          </span><br><span class="line">        &#123;  </span><br><span class="line">             console.log(&quot;onDisconnected&quot;);  </span><br><span class="line">             resetUI(); </span><br><span class="line">        &#125;</span><br><span class="line">        function discoverDevices()</span><br><span class="line">        &#123;</span><br><span class="line">            console.log(&quot;discoverDevices&quot;);             &#x2F;&#x2F;console.log：控制台打印输出</span><br><span class="line">            var options &#x3D; &#123;acceptAllDevices:true,</span><br><span class="line">                optionalServices: [DEVICE_INFORMATION_SERVICE, ACCELEROMETER_SERVICE, LED_SERVICE, TEMPERATURE_SERVICE] </span><br><span class="line">            &#125;        &#x2F;&#x2F;发现所有周边蓝牙设备</span><br><span class="line">            navigator.bluetooth.requestDevice(options)   &#x2F;&#x2F;Navigator对象：包含有关浏览器的信息。</span><br><span class="line">            .then(device &#x3D;&gt; &#123;</span><br><span class="line">                console.log(&#39;&gt; Name:&#39; + device.name);</span><br><span class="line">                console.log(&#39;&gt; Id:&#39;   + device.id);</span><br><span class="line">                console.log(&#39;&gt; Connected:&#39; + device.gatt.connected);</span><br><span class="line">                selected_device &#x3D; device;</span><br><span class="line">                console.log(selected_device);</span><br><span class="line">                connect();                            </span><br><span class="line">            &#125;)</span><br><span class="line">            .catch(error &#x3D;&gt; &#123;</span><br><span class="line">                alert(&#39;ERROR:&#39; +error);</span><br><span class="line">                console.log(&#39;ERROR:&#39; + error);</span><br><span class="line">                &#125;);</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        function connect()                             </span><br><span class="line">        &#123;</span><br><span class="line">            console.log(&quot;connecting&quot;);</span><br><span class="line">            selected_device.gatt.connect()</span><br><span class="line">            .then(</span><br><span class="line">                function (server)        &#x2F;&#x2F;表示连接成功</span><br><span class="line">                &#123;</span><br><span class="line">                    console.log(&quot;Connected to&quot; + server.device.id);</span><br><span class="line">                    console.log(&quot;Connected&#x3D;&quot; + server.connected);</span><br><span class="line">                    selected_device.addEventListener( &#39;gattserverdisconnected&#39;,onDisconnected);  </span><br><span class="line"> </span><br><span class="line">                    connected_server &#x3D; server;</span><br><span class="line">                    discoverSvcsAndChars();    </span><br><span class="line">                    setConnectedStatus(true);  &#x2F;&#x2F;设置电脑蓝牙的当前连接状态</span><br><span class="line"> </span><br><span class="line">                &#125;,</span><br><span class="line">                function (error)        &#x2F;&#x2F;表示连接失败</span><br><span class="line">                &#123;</span><br><span class="line">                    console.log(&quot;ERROR:could not connct-&quot; + error);</span><br><span class="line">                    alert(&quot;ERROR:could not connct-&quot; + error);</span><br><span class="line">                    setConnectedStatus(false);  &#x2F;&#x2F; 在第3课基础上添加的函数,设置电脑蓝牙的当前连接状态</span><br><span class="line">                &#125;</span><br><span class="line">            );</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        function setConnectedStatus(status)  &#x2F;&#x2F;设置电脑蓝牙的当前连接状态</span><br><span class="line">        &#123;</span><br><span class="line">            connected &#x3D; status;</span><br><span class="line">            document.getElementById(&#39;status_connected&#39;).innerHTML &#x3D; status;</span><br><span class="line">            if (status &#x3D;&#x3D; true) </span><br><span class="line">            &#123;   </span><br><span class="line">                document.getElementById(&#39;btn_scan&#39;).innerHTML &#x3D; &quot;Disconnect&quot;; </span><br><span class="line">            &#125; </span><br><span class="line">            else </span><br><span class="line">            &#123;   </span><br><span class="line">                document.getElementById(&#39;btn_scan&#39;).innerHTML &#x3D; &quot;Discover Devices&quot;;  </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        function setDiscoveryStatus(status)</span><br><span class="line">         &#123;  </span><br><span class="line">             services_discovered &#x3D; status; </span><br><span class="line">             document.getElementById(&#39;status_discovered&#39;).innerHTML &#x3D; status;</span><br><span class="line">         &#125;</span><br><span class="line"> </span><br><span class="line">        function resetUI()     </span><br><span class="line">        &#123;</span><br><span class="line">            setConnectedStatus(false);</span><br><span class="line">            setDiscoveryStatus(false);   </span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        function discoverSvcsAndChars()    </span><br><span class="line">        &#123;  </span><br><span class="line">            console.log(&quot;discoverSvcsAndChars server&#x3D;&quot; + connected_server); </span><br><span class="line">            connected_server.getPrimaryServices()</span><br><span class="line">            .then(services &#x3D;&gt; </span><br><span class="line">            &#123;    </span><br><span class="line">                    has_accelerometer_service &#x3D; false;    </span><br><span class="line">                    has_led_service &#x3D; false; </span><br><span class="line">                    has_temperature_serivce &#x3D; false;</span><br><span class="line">                    has_device_information_service &#x3D; false; </span><br><span class="line">                    services_discovered &#x3D; 0;    </span><br><span class="line">                    service_count &#x3D; services.length;    </span><br><span class="line">                    console.log(&quot;Got &quot; + service_count + &quot; services&quot;); </span><br><span class="line"> </span><br><span class="line">                    services.forEach(service &#x3D;&gt; </span><br><span class="line">                    &#123;     </span><br><span class="line">                        if (service.uuid &#x3D;&#x3D; ACCELEROMETER_SERVICE)</span><br><span class="line">                        &#123;      </span><br><span class="line">                            has_accelerometer_service &#x3D; true;    </span><br><span class="line">                        &#125;     </span><br><span class="line">                        if (service.uuid &#x3D;&#x3D; LED_SERVICE) </span><br><span class="line">                        &#123;      </span><br><span class="line">                            has_led_service &#x3D; true;     </span><br><span class="line">                        &#125;  </span><br><span class="line">                        if (service.uuid &#x3D;&#x3D; TEMPERATURE_SERVICE) </span><br><span class="line">                        &#123;      </span><br><span class="line">                            has_temperature_serivce &#x3D; true;     </span><br><span class="line">                        &#125; </span><br><span class="line">                        if (service.uuid &#x3D;&#x3D; DEVICE_INFORMATION_SERVICE) </span><br><span class="line">                        &#123;      </span><br><span class="line">                            has_device_information_service &#x3D; true;     </span><br><span class="line">                        &#125; </span><br><span class="line">                        console.log(&#39;Getting Characteristics for service &#39; + service.uuid);     </span><br><span class="line">                        service.getCharacteristics()</span><br><span class="line">                        .then(characteristics &#x3D;&gt; </span><br><span class="line">                        &#123;      </span><br><span class="line">                            console.log(&#39;&gt; Service: &#39; + service.uuid);      </span><br><span class="line">                            services_discovered++;     </span><br><span class="line">                            characteristics_discovered &#x3D; 0;      </span><br><span class="line">                            characteristic_count &#x3D; characteristics.length;      </span><br><span class="line">                            characteristics.forEach(characteristic &#x3D;&gt; </span><br><span class="line">                            &#123;       </span><br><span class="line">                                characteristics_discovered++;       </span><br><span class="line">                                console.log(&#39;&gt;&gt; Characteristic: &#39; + characteristic.uuid);       </span><br><span class="line">                                if (characteristic.uuid &#x3D;&#x3D; ACCELEROMETER_DATA)</span><br><span class="line">                                &#123;        </span><br><span class="line">                                    accelerometer_data &#x3D; characteristic;        </span><br><span class="line">                                    has_accelerometer_data &#x3D; true;       </span><br><span class="line">                                &#125;       </span><br><span class="line">                                if (characteristic.uuid &#x3D;&#x3D; LED_MATRIX_STATE) </span><br><span class="line">                                &#123;        </span><br><span class="line">                                    led_matrix_state &#x3D; characteristic;        </span><br><span class="line">                                    has_led_matrix_state &#x3D; true;       </span><br><span class="line">                                &#125;    </span><br><span class="line">                                if (characteristic.uuid &#x3D;&#x3D; TEMPERATURE) </span><br><span class="line">                                &#123;        </span><br><span class="line">                                    temperature &#x3D; characteristic;        </span><br><span class="line">                                    has_temperature &#x3D; true;       </span><br><span class="line">                                &#125;  </span><br><span class="line">                                if (characteristic.uuid &#x3D;&#x3D; MODEL_NUMBER_STRING) </span><br><span class="line">                                &#123;        </span><br><span class="line">                                    model_number_string &#x3D; characteristic;        </span><br><span class="line">                                    has_model_name_string &#x3D; true;       </span><br><span class="line">                                &#125;  </span><br><span class="line">                                if (services_discovered &#x3D;&#x3D; service_count &amp;&amp; characteristics_discovered &#x3D;&#x3D; characteristic_count) </span><br><span class="line">                                &#123;        </span><br><span class="line">                                    console.log(&quot;FINISHED DISCOVERY&quot;); </span><br><span class="line">                                    setDiscoveryStatus(true);       </span><br><span class="line">                                    &#x2F;&#x2F;setDiscoveryStatus(true);                  </span><br><span class="line">                                &#125;      </span><br><span class="line">                            &#125;);     </span><br><span class="line">                        &#125;);    </span><br><span class="line">                    &#125;);  </span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        &lt;&#x2F;script&gt;</span><br><span class="line">    &lt;&#x2F;head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;h2&gt;</span><br><span class="line">            Status    &lt;!-- 显示蓝牙状态 --&gt;</span><br><span class="line">        &lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;table border&#x3D;&quot;1&quot;&gt; </span><br><span class="line">            &lt;tr&gt;        &lt;!--表格的第一行 --&gt;</span><br><span class="line">                &lt;td&gt;     &lt;b&gt;Connected&lt;&#x2F;b&gt;       &lt;&#x2F;td&gt; </span><br><span class="line">                &lt;td&gt;     &lt;b&gt;Service Discovery Completed&lt;&#x2F;b&gt;       &lt;&#x2F;td&gt;      </span><br><span class="line">            &lt;&#x2F;tr&gt;</span><br><span class="line">            &lt;tr&gt;        &lt;!--表格的第二行 --&gt;</span><br><span class="line">                &lt;td id&#x3D;&quot;status_connected&quot;&gt; false &lt;&#x2F;td&gt; </span><br><span class="line">                &lt;td id&#x3D;&quot;status_discovered&quot;&gt; false &lt;&#x2F;td&gt; </span><br><span class="line">            &lt;&#x2F;tr&gt;  </span><br><span class="line">        &lt;&#x2F;table&gt;</span><br><span class="line">        &lt;h2&gt;</span><br><span class="line">            Device Discovery  Or Disconnect  &lt;!-- 扫描&#x2F;发现蓝牙设备 --&gt;</span><br><span class="line">        &lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;button id &#x3D; &quot;btn_scan&quot; onclick&#x3D;&quot;discoverOrdisconnectDevices()&quot;&gt;Start scan&lt;&#x2F;button&gt;  </span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure></li>
 </ul>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://青青的本丸.github.io/2020/06/17/micro-bit%E8%93%9D%E7%89%99%E8%BF%9E%E6%8E%A5/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/xiaolong.jpg">
-      <meta itemprop="name" content="咸鱼婶婶">
-      <meta itemprop="description" content="欢迎来到本丸">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="青青的本丸">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/17/micro-bit%E8%93%9D%E7%89%99%E8%BF%9E%E6%8E%A5/" class="post-title-link" itemprop="url">micro:bit蓝牙连接</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-06-17 17:37:29 / 修改时间：18:30:31" itemprop="dateCreated datePublished" datetime="2020-06-17T17:37:29+08:00">2020-06-17</time>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/06/17/micro-bit%E8%93%9D%E7%89%99%E8%BF%9E%E6%8E%A5/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/17/micro-bit%E8%93%9D%E7%89%99%E8%BF%9E%E6%8E%A5/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="micro-bit-蓝牙初步连接"><a href="#micro-bit-蓝牙初步连接" class="headerlink" title="micro:bit 蓝牙初步连接"></a>micro:bit 蓝牙初步连接</h2><p>-第一步打开电脑蓝牙<br>-第二步用USB线连接开发板和电脑，将下载的固件移到开发板对应的MINCROBIT(D:/)盘中，这个时候会发现板子上黄色小灯不停闪烁，这说明在下载中，然后板子中LED小灯会显出Hi！,这就说明下载成功。<br>-第三步在在谷歌浏览器中输入 chrome://bluetooth-internals<br> a 点击Devices再点击start scan搜索周边蓝牙设备等待；<br> b 显示出BBC micro:bit的这一行就是我们的开发板，点击inspect进行连接；<br> c 出现connected即为连接成功。<br>如果板子上显示C字符即为连接成功。</p>
-<hr>
-<h2 id="micro-bit网页蓝牙连接"><a href="#micro-bit网页蓝牙连接" class="headerlink" title="micro:bit网页蓝牙连接"></a>micro:bit网页蓝牙连接</h2><ul>
-<li>第一步<br>a 新建一个HTML文件并输入如下代码：<br>  <img src="https://www.helloimg.com/images/2020/06/17/ZC0KG0Z8VQELT4P6425206eb9cb85a1f.png" alt="ZC0KG0Z8VQELT4P6425206eb9cb85a1f.png"><br>  漏了两行进行修改：<br>  <img src="https://www.helloimg.com/images/2020/06/17/T7JD98F0G1DN97333f84c3c835550.png" alt="T7JD98F0G1DN97333f84c3c835550.png"><br>  并产生如下结果：<br>  <img src="https://www.helloimg.com/images/2020/06/17/OB3_D_BEF5XIHYZ340Q2577c441fdfccd23b.png" alt="OB3_D_BEF5XIHYZ340Q2577c441fdfccd23b.png"><br>b 按F12显示网页代码，点击start scan按钮，进行连接如显示connect=true，bbc板子显示C即为成功。</li>
-<li>第二步<br>a 输入函数function可以显示蓝牙当前的连接状态，如图：<br><img src="https://www.helloimg.com/images/2020/06/17/T_XE8U8IUSTTQ04AD99cb5e11b65bece30b.png" alt="T_XE8U8IUSTTQ04AD99cb5e11b65bece30b.png"><br><img src="https://www.helloimg.com/images/2020/06/17/FM0ZOS6LJ30862QOEET53e094056d3c691e.png" alt="FM0ZOS6LJ30862QOEET53e094056d3c691e.png"><br>b 显示结果如下：<br><img src="https://www.helloimg.com/images/2020/06/17/QB59KFL1E_LBQSO5Q43450c1c1913d1288a2.png" alt="QB59KFL1E_LBQSO5Q43450c1c1913d1288a2.png"><br>c 就会发现 Connected按钮由false变成了true，最底下的按钮由链接按钮变成了disconnect的功能按钮，并且板子上出现字母C，如图：<br><img src="https://www.helloimg.com/images/2020/06/17/C7SI6A291EQ73ZAJWEHMfb6d385b562cba25.png" alt="C7SI6A291EQ73ZAJWEHMfb6d385b562cba25.png"></li>
-<li>第三步<br>a 输入如下代码：<br><img src="https://www.helloimg.com/images/2020/06/17/P7VS6U57EUJO8O1JD52dfab7b64623d38d.png" alt="P7VS6U57EUJO8O1JD52dfab7b64623d38d.png"><br>b 刷新点击start scan显示如下结果：<br><img src="https://www.helloimg.com/images/2020/06/17/C7SI6A291EQ73ZAJWEHMfb6d385b562cba25.png" alt="C7SI6A291EQ73ZAJWEHMfb6d385b562cba25.png"><br>c bbc板子显示结果如图：<br><img src="https://www.helloimg.com/images/2020/06/17/IMG_20200617_172809854e23655e1011ee.jpg" alt="IMG_20200617_172809854e23655e1011ee.jpg"></li>
-</ul>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/17/micro-bit%E8%93%9D%E7%89%99%E8%BF%9E%E6%8E%A5/" rel="prev" title="micro:bit蓝牙连接">
+      <i class="fa fa-chevron-left"></i> micro:bit蓝牙连接
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://青青的本丸.github.io/2020/05/27/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/xiaolong.jpg">
-      <meta itemprop="name" content="咸鱼婶婶">
-      <meta itemprop="description" content="欢迎来到本丸">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="青青的本丸">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/27/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/" class="post-title-link" itemprop="url">博客美化</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-05-27 15:20:46 / 修改时间：15:29:10" itemprop="dateCreated datePublished" datetime="2020-05-27T15:20:46+08:00">2020-05-27</time>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/05/27/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/27/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><em>视频资源来自哔哩哔哩up主，侵删。</em></p>
-<ul>
-<li><a href="https://b23.tv/GTNMPX" target="_blank" rel="noopener">next主题使用</a><br>a <a href="https://b23.tv/sCnDCN" target="_blank" rel="noopener">更改主题为中文</a><br>b <a href="https://b23.tv/agJOAn" target="_blank" rel="noopener">主题样式更改</a><br>c <a href="https://b23.tv/rMAHiM" target="_blank" rel="noopener">头像设置</a><br>d <a href="https://b23.tv/3lD9bL" target="_blank" rel="noopener">使用markdown开启评论功能</a></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://青青的本丸.github.io/2020/05/20/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/xiaolong.jpg">
-      <meta itemprop="name" content="咸鱼婶婶">
-      <meta itemprop="description" content="欢迎来到本丸">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="青青的本丸">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/20/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">手把手教你搭建自己的hexo+GitHub博客</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-20 21:05:39" itemprop="dateCreated datePublished" datetime="2020-05-20T21:05:39+08:00">2020-05-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-27 15:27:57" itemprop="dateModified" datetime="2020-05-27T15:27:57+08:00">2020-05-27</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/05/20/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/20/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>为记录自己的搭建过程及所用资料，仅供参考。<br><em>视频资源来自哔哩哔哩up主，侵删。</em></p>
-<ul>
-<li><a href="https://b23.tv/Blu7xI" target="_blank" rel="noopener">第一步node安装</a><br>a 下载nodejs，并进行安装，建议安装到D盘。<br>b 同时按下Windows+r，输入cmd打开命令函，输入node -v按回车（每输入一条密令按回车启动）。</li>
-<li><a href="https://b23.tv/quNqvF" target="_blank" rel="noopener">第二步GitHub注册</a><br>a google搜索GitHub，进入官网进行注册账户，并验证邮箱。<br>b 点击start a project，repositoryname输入你的账户名.github.io，创建储存库。</li>
-<li><a href="https://b23.tv/EMxFbM" target="_blank" rel="noopener">第三步git for win安装</a><br>a 下载git for win，建议安装至D盘。<br>b 一直点击next至出现三个选项，选择use git from the Windows command prompt接着继续next至安装完成。<br>c 打开cmd输入git。</li>
-<li><a href="https://b23.tv/BNN0eU" target="_blank" rel="noopener">第四步githubSHH配置</a><br> a 输入密令ssh-keygen -t rsa -C “你的邮箱” 。<br> b 打开你的github，点击右上方头像旁的箭头选择settings。<br> c 点击SSH and GPG keys,新建秘钥，title随便写，打开ssh文件夹，用记事本方式打开id_rsa.pub，复制黏贴进key。</li>
-<li><a href="https://b23.tv/5Q5gYK" target="_blank" rel="noopener">第五步hexo本地使用</a><br>a 百度搜索hexo进入hexo官网，点击文档就可以看见你的安装密令,复制。<br>  <img src="https://www.helloimg.com/images/2020/05/20/image208451b12c1e9c32.png" alt="image208451b12c1e9c32.png"><br>b 打开D盘（个人建议）新建一个blog文件夹，打开cmd输入D:转至D盘，输入cd blog，输入复制的安装密令，等待。<br>c 输入hexo init (你的博客名),等待。<br>d 进入安装目录（输入cd (你的博客名)），输入密令npm install，等待。<br>e 本地预览一下输入密令hexo s -p,复制网址进行预览。</li>
-<li><a href="https://b23.tv/QbhTGK" target="_blank" rel="noopener">第六步sublime安装</a><br>a 搜索下载sublime安装包，安装至D盘。<br>b 把你的博客目录直接拖进打开的subline软件。<br>c 打开文件夹里的abc（这里指你的博客名）&gt;source&gt;-post&gt;hello-world,在第6行输入##hello hexo，保存（支持快捷键Ctrl+s）。</li>
-<li><a href="https://b23.tv/yljsyl" target="_blank" rel="noopener">第七步hexo发布至github</a><br>a 打开你的github存储库复制此链接。<br>   <img src="https://www.helloimg.com/images/2020/05/27/imagea26b521a686d89d7.png" alt="imagea26b521a686d89d7.png"><br>b 用sublime打开文件abc&gt;themes&gt;config.yml，在最后面type:输入git。<br>c 另起一行输入repo: ，将复制的链接黏贴。<br>d 在第10行左右的author：输入你的用户名，在16行左右的url：复制你的博客链接。在博客文件夹下打开右击打开git bash 或打开cmd，cd到你的博客文件夹，输入hexo g回车hexo d回车。<br>e 接下来的步骤打字较为麻烦详情点击视频链接观看。之前步骤描述不清晰的话请点击视频反复观看。</li>
-<li><a href="https://b23.tv/3lD9bL" target="_blank" rel="noopener">新建一篇文章</a></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://青青的本丸.github.io/2020/05/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/xiaolong.jpg">
-      <meta itemprop="name" content="咸鱼婶婶">
-      <meta itemprop="description" content="欢迎来到本丸">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="青青的本丸">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/" class="post-title-link" itemprop="url">我的第一篇博文</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-05-20 17:32:37 / 修改时间：21:02:36" itemprop="dateCreated datePublished" datetime="2020-05-20T17:32:37+08:00">2020-05-20</time>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/05/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="标题1"><a href="#标题1" class="headerlink" title="标题1"></a>标题1</h1><hr>
-<h2 id="标题2"><a href="#标题2" class="headerlink" title="标题2"></a>标题2</h2><hr>
-<h3 id="标题3"><a href="#标题3" class="headerlink" title="标题3"></a>标题3</h3><hr>
-<ul>
-<li>列表1</li>
-<li>列表2<br>  a 字列表<br>  b 字列表</li>
-<li>列表3</li>
-</ul>
-<p><a href="https://www.baidu.com" target="_blank" rel="noopener">百度</a><br><img src="https://www.helloimg.com/images/2020/05/20/071531f7b7438759bcce2df954ca3de1d5d019b6418c638f.jpg" alt="小龙景光"><br><em>斜体</em><br><strong>加粗</strong><br><code>&lt;html&gt; &lt;/html&gt;</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">   &lt;head&gt;</span><br><span class="line">	   &lt;title&gt;标题&lt;&#x2F;title&gt;</span><br><span class="line">   &lt;&#x2F;head&gt;</span><br><span class="line">   &lt;body&gt;&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>代码示例<br><img src="https://www.helloimg.com/images/2020/05/20/image518ea7695b914a9b.png" alt="image518ea7695b914a9b.png"></p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://青青的本丸.github.io/2020/05/15/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/xiaolong.jpg">
-      <meta itemprop="name" content="咸鱼婶婶">
-      <meta itemprop="description" content="欢迎来到本丸">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="青青的本丸">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/15/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-05-15 19:29:42 / 修改时间：20:41:45" itemprop="dateCreated datePublished" datetime="2020-05-15T19:29:42+08:00">2020-05-15</time>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/05/15/hello-world/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/15/hello-world/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Hello-hexo"><a href="#Hello-hexo" class="headerlink" title="Hello hexo"></a>Hello hexo</h2><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://青青的本丸.github.io/"/>
-  <updated>2020-06-17T10:30:31.196Z</updated>
+  <updated>2020-06-19T07:18:04.994Z</updated>
   <id>https://青青的本丸.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>服务特性</title>
+    <link href="https://青青的本丸.github.io/2020/06/19/%E6%9C%8D%E5%8A%A1%E7%89%B9%E6%80%A7/"/>
+    <id>https://青青的本丸.github.io/2020/06/19/%E6%9C%8D%E5%8A%A1%E7%89%B9%E6%80%A7/</id>
+    <published>2020-06-19T06:48:18.000Z</published>
+    <updated>2020-06-19T07:18:04.994Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;##如何从源码的角度实现服务与特性&lt;br&gt;##目标实现三个特性&lt;br&gt;&lt;img src=&quot;https://www.helloimg.com/images/2020/06/19/06C384B7ACH3MZ1I24214c6c6ab0c907.png&quot; alt=&quot;06C384
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>micro:bit蓝牙连接</title>
