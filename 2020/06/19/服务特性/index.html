@@ -20,24 +20,22 @@
     var CONFIG = {"hostname":"xn--qiq212dx0k035aa.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"b2t":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="##如何从源码的角度实现服务与特性##目标实现三个特性  第一步添加单元格，代码如下： 第二步新增函数发现服务与特性a 添加变量，用来表明服务与特性是否存在。b 去官方文档中获取UUID号：c 添加三个变量表示特性本身：(统计服务目前已经发现的数量,特性发现的数量,我们应该发现的数量)d 添加函数用来发现服务与特性，函数代码如下： 新增函数控制单元格改变： 最终结果及完整代码展示123456789">
+  <meta name="description" content="##如何从源码的角度实现服务与特性##目标实现三个特性  第一步添加单元格，代码如下： 第二步新增函数发现服务与特性a 添加变量，用来表明服务与特性是否存在。123456var has_accelerometer_service &#x3D; false; var has_accelerometer_data &#x3D; false; var has_led_service &#x3D; fal">
 <meta property="og:type" content="article">
 <meta property="og:title" content="服务特性">
 <meta property="og:url" content="https://青青的本丸.github.io/2020/06/19/%E6%9C%8D%E5%8A%A1%E7%89%B9%E6%80%A7/index.html">
 <meta property="og:site_name" content="青青的本丸">
-<meta property="og:description" content="##如何从源码的角度实现服务与特性##目标实现三个特性  第一步添加单元格，代码如下： 第二步新增函数发现服务与特性a 添加变量，用来表明服务与特性是否存在。b 去官方文档中获取UUID号：c 添加三个变量表示特性本身：(统计服务目前已经发现的数量,特性发现的数量,我们应该发现的数量)d 添加函数用来发现服务与特性，函数代码如下： 新增函数控制单元格改变： 最终结果及完整代码展示123456789">
+<meta property="og:description" content="##如何从源码的角度实现服务与特性##目标实现三个特性  第一步添加单元格，代码如下： 第二步新增函数发现服务与特性a 添加变量，用来表明服务与特性是否存在。123456var has_accelerometer_service &#x3D; false; var has_accelerometer_data &#x3D; false; var has_led_service &#x3D; fal">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/06C384B7ACH3MZ1I24214c6c6ab0c907.png">
 <meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/7CRQD8NQ02M0RAH8ZA6353de691c28f4ce1.png">
-<meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/GQT6O64Y1RGT2WH262370836fd7d529d74.png">
 <meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/1IN3EUZ2XRT_IC6QNEB378794c2ecfa0b97.png">
 <meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/T5KJ9OTWD07ZCD251a2ba05ac5676786.png">
 <meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/XFR81VDNO_T0M831F1e885ef4efe3c5016.png">
 <meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/HIU03778D2TFUWA09b17d30fa32541cc.png">
 <meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/VEGYE7GWR099VQEO4AW985aa5635b050066f.png">
-<meta property="og:image" content="https://www.helloimg.com/images/2020/06/19/288R48LVUHDNZ1UYXKZL931e6b38af00325b.png">
 <meta property="article:published_time" content="2020-06-19T06:48:18.000Z">
-<meta property="article:modified_time" content="2020-06-19T07:18:04.994Z">
+<meta property="article:modified_time" content="2020-06-19T07:51:20.222Z">
 <meta property="article:author" content="咸鱼婶婶">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.helloimg.com/images/2020/06/19/06C384B7ACH3MZ1I24214c6c6ab0c907.png">
@@ -206,7 +204,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-06-19 14:48:18 / 修改时间：15:18:04" itemprop="dateCreated datePublished" datetime="2020-06-19T14:48:18+08:00">2020-06-19</time>
+              <time title="创建时间：2020-06-19 14:48:18 / 修改时间：15:51:20" itemprop="dateCreated datePublished" datetime="2020-06-19T14:48:18+08:00">2020-06-19</time>
             </span>
 
           
@@ -237,11 +235,243 @@
         <p>##如何从源码的角度实现服务与特性<br>##目标实现三个特性<br><img src="https://www.helloimg.com/images/2020/06/19/06C384B7ACH3MZ1I24214c6c6ab0c907.png" alt="06C384B7ACH3MZ1I24214c6c6ab0c907.png"></p>
 <ul>
 <li>第一步添加单元格，代码如下：<br><img src="https://www.helloimg.com/images/2020/06/19/7CRQD8NQ02M0RAH8ZA6353de691c28f4ce1.png" alt="7CRQD8NQ02M0RAH8ZA6353de691c28f4ce1.png"></li>
-<li>第二步新增函数发现服务与特性<br>a 添加变量，用来表明服务与特性是否存在。<br><img src="https://www.helloimg.com/images/2020/06/19/GQT6O64Y1RGT2WH262370836fd7d529d74.png" alt="GQT6O64Y1RGT2WH262370836fd7d529d74.png"><br>b 去官方文档中获取UUID号：<br><img src="https://www.helloimg.com/images/2020/06/19/1IN3EUZ2XRT_IC6QNEB378794c2ecfa0b97.png" alt="1IN3EUZ2XRT_IC6QNEB378794c2ecfa0b97.png"><br>c 添加三个变量表示特性本身：(统计服务目前已经发现的数量,特性发现的数量,我们应该发现的数量)<br><img src="https://www.helloimg.com/images/2020/06/19/T5KJ9OTWD07ZCD251a2ba05ac5676786.png" alt="T5KJ9OTWD07ZCD251a2ba05ac5676786.png"><br>d 添加函数用来发现服务与特性，函数代码如下：<br><img src="https://www.helloimg.com/images/2020/06/19/XFR81VDNO_T0M831F1e885ef4efe3c5016.png" alt="XFR81VDNO_T0M831F1e885ef4efe3c5016.png"><br><img src="https://www.helloimg.com/images/2020/06/19/HIU03778D2TFUWA09b17d30fa32541cc.png" alt="HIU03778D2TFUWA09b17d30fa32541cc.png"></li>
-<li>新增函数控制单元格改变：<br><img src="https://www.helloimg.com/images/2020/06/19/VEGYE7GWR099VQEO4AW985aa5635b050066f.png" alt="VEGYE7GWR099VQEO4AW985aa5635b050066f.png"></li>
-<li>最终结果及完整代码展示<br><img src="https://www.helloimg.com/images/2020/06/19/288R48LVUHDNZ1UYXKZL931e6b38af00325b.png" alt="288R48LVUHDNZ1UYXKZL931e6b38af00325b.png"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt; </span><br><span class="line">        &lt;script&gt;</span><br><span class="line">        var    selected_device;    &#x2F;&#x2F; 保存用户选择的蓝牙设备 </span><br><span class="line">        var    connected_server;    &#x2F;&#x2F; 保存用户连接的蓝牙设备 </span><br><span class="line">        var    connected &#x3D; false;     &#x2F;&#x2F;,保存电脑蓝牙的当前连接状态</span><br><span class="line">        var    services_discovered &#x3D; false; </span><br><span class="line"> </span><br><span class="line">        &#x2F;&#x2F; presence of services and characteristics </span><br><span class="line">        var has_accelerometer_service &#x3D; false; </span><br><span class="line">        var has_accelerometer_data &#x3D; false; </span><br><span class="line">        var has_led_service &#x3D; false;</span><br><span class="line">        var has_led_matrix_state &#x3D; false; </span><br><span class="line">        var has_device_information_service &#x3D; false; </span><br><span class="line">        var has_model_name_string &#x3D; false; </span><br><span class="line"> </span><br><span class="line">        var has_temperature_serivce &#x3D; false;</span><br><span class="line">        var has_temperature &#x3D; false;</span><br><span class="line"> </span><br><span class="line">       &#x2F;&#x2F; service UUIDs </span><br><span class="line">       ACCELEROMETER_SERVICE &#x3D; &#39;e95d0753-251d-470a-a062-fa1922dfa9a8&#39;; </span><br><span class="line">       LED_SERVICE &#x3D; &#39;e95dd91d-251d-470a-a062-fa1922dfa9a8&#39;; </span><br><span class="line">       DEVICE_INFORMATION_SERVICE &#x3D; &#39;0000180a-0000-1000-8000-00805f9b34fb&#39;;</span><br><span class="line"> </span><br><span class="line">       TEMPERATURE_SERVICE &#x3D; &#39;e95d6100-251d-470a-a062-fa1922dfa9a8&#39;;</span><br><span class="line">       &#x2F;&#x2F; characteristic UUIDs </span><br><span class="line">       ACCELEROMETER_DATA &#x3D; &#39;e95dca4b-251d-470a-a062-fa1922dfa9a8&#39;; </span><br><span class="line">       LED_MATRIX_STATE  &#x3D; &#39;e95d7b77-251d-470a-a062-fa1922dfa9a8&#39;; </span><br><span class="line">       MODEL_NUMBER_STRING &#x3D; &#39;00002a24-0000-1000-8000-00805f9b34fb&#39;; </span><br><span class="line"> </span><br><span class="line">       TEMPERATURE &#x3D; &#39;e95d9250-251d-470a-a062-fa1922dfa9a8&#39;;</span><br><span class="line">       &#x2F;&#x2F; cached characteristics </span><br><span class="line">        var led_matrix_state; </span><br><span class="line">        var model_number_string;</span><br><span class="line">        var accelerometer_data; </span><br><span class="line">        var temperature;</span><br><span class="line"> </span><br><span class="line">         &#x2F;&#x2F;</span><br><span class="line">         var service_count;</span><br><span class="line">         var services_discovered;</span><br><span class="line">         var characteristics_discovered;  </span><br><span class="line">         var characteristic_count ; </span><br><span class="line">        function discoverOrdisconnectDevices() </span><br><span class="line">        &#123;</span><br><span class="line">            console.log(&quot;discoverDevicesOrDisconnect&quot;); </span><br><span class="line">            if (!connected)</span><br><span class="line">                discoverDevices();</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                selected_device.gatt.disconnect();</span><br><span class="line">            &#125;</span><br><span class="line"> </span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        function onDisconnected()          </span><br><span class="line">        &#123;  </span><br><span class="line">             console.log(&quot;onDisconnected&quot;);  </span><br><span class="line">             resetUI(); </span><br><span class="line">        &#125;</span><br><span class="line">        function discoverDevices()</span><br><span class="line">        &#123;</span><br><span class="line">            console.log(&quot;discoverDevices&quot;);             &#x2F;&#x2F;console.log：控制台打印输出</span><br><span class="line">            var options &#x3D; &#123;acceptAllDevices:true,</span><br><span class="line">                optionalServices: [DEVICE_INFORMATION_SERVICE, ACCELEROMETER_SERVICE, LED_SERVICE, TEMPERATURE_SERVICE] </span><br><span class="line">            &#125;        &#x2F;&#x2F;发现所有周边蓝牙设备</span><br><span class="line">            navigator.bluetooth.requestDevice(options)   &#x2F;&#x2F;Navigator对象：包含有关浏览器的信息。</span><br><span class="line">            .then(device &#x3D;&gt; &#123;</span><br><span class="line">                console.log(&#39;&gt; Name:&#39; + device.name);</span><br><span class="line">                console.log(&#39;&gt; Id:&#39;   + device.id);</span><br><span class="line">                console.log(&#39;&gt; Connected:&#39; + device.gatt.connected);</span><br><span class="line">                selected_device &#x3D; device;</span><br><span class="line">                console.log(selected_device);</span><br><span class="line">                connect();                            </span><br><span class="line">            &#125;)</span><br><span class="line">            .catch(error &#x3D;&gt; &#123;</span><br><span class="line">                alert(&#39;ERROR:&#39; +error);</span><br><span class="line">                console.log(&#39;ERROR:&#39; + error);</span><br><span class="line">                &#125;);</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        function connect()                             </span><br><span class="line">        &#123;</span><br><span class="line">            console.log(&quot;connecting&quot;);</span><br><span class="line">            selected_device.gatt.connect()</span><br><span class="line">            .then(</span><br><span class="line">                function (server)        &#x2F;&#x2F;表示连接成功</span><br><span class="line">                &#123;</span><br><span class="line">                    console.log(&quot;Connected to&quot; + server.device.id);</span><br><span class="line">                    console.log(&quot;Connected&#x3D;&quot; + server.connected);</span><br><span class="line">                    selected_device.addEventListener( &#39;gattserverdisconnected&#39;,onDisconnected);  </span><br><span class="line"> </span><br><span class="line">                    connected_server &#x3D; server;</span><br><span class="line">                    discoverSvcsAndChars();    </span><br><span class="line">                    setConnectedStatus(true);  &#x2F;&#x2F;设置电脑蓝牙的当前连接状态</span><br><span class="line"> </span><br><span class="line">                &#125;,</span><br><span class="line">                function (error)        &#x2F;&#x2F;表示连接失败</span><br><span class="line">                &#123;</span><br><span class="line">                    console.log(&quot;ERROR:could not connct-&quot; + error);</span><br><span class="line">                    alert(&quot;ERROR:could not connct-&quot; + error);</span><br><span class="line">                    setConnectedStatus(false);  &#x2F;&#x2F; 在第3课基础上添加的函数,设置电脑蓝牙的当前连接状态</span><br><span class="line">                &#125;</span><br><span class="line">            );</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        function setConnectedStatus(status)  &#x2F;&#x2F;设置电脑蓝牙的当前连接状态</span><br><span class="line">        &#123;</span><br><span class="line">            connected &#x3D; status;</span><br><span class="line">            document.getElementById(&#39;status_connected&#39;).innerHTML &#x3D; status;</span><br><span class="line">            if (status &#x3D;&#x3D; true) </span><br><span class="line">            &#123;   </span><br><span class="line">                document.getElementById(&#39;btn_scan&#39;).innerHTML &#x3D; &quot;Disconnect&quot;; </span><br><span class="line">            &#125; </span><br><span class="line">            else </span><br><span class="line">            &#123;   </span><br><span class="line">                document.getElementById(&#39;btn_scan&#39;).innerHTML &#x3D; &quot;Discover Devices&quot;;  </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        function setDiscoveryStatus(status)</span><br><span class="line">         &#123;  </span><br><span class="line">             services_discovered &#x3D; status; </span><br><span class="line">             document.getElementById(&#39;status_discovered&#39;).innerHTML &#x3D; status;</span><br><span class="line">         &#125;</span><br><span class="line"> </span><br><span class="line">        function resetUI()     </span><br><span class="line">        &#123;</span><br><span class="line">            setConnectedStatus(false);</span><br><span class="line">            setDiscoveryStatus(false);   </span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        function discoverSvcsAndChars()    </span><br><span class="line">        &#123;  </span><br><span class="line">            console.log(&quot;discoverSvcsAndChars server&#x3D;&quot; + connected_server); </span><br><span class="line">            connected_server.getPrimaryServices()</span><br><span class="line">            .then(services &#x3D;&gt; </span><br><span class="line">            &#123;    </span><br><span class="line">                    has_accelerometer_service &#x3D; false;    </span><br><span class="line">                    has_led_service &#x3D; false; </span><br><span class="line">                    has_temperature_serivce &#x3D; false;</span><br><span class="line">                    has_device_information_service &#x3D; false; </span><br><span class="line">                    services_discovered &#x3D; 0;    </span><br><span class="line">                    service_count &#x3D; services.length;    </span><br><span class="line">                    console.log(&quot;Got &quot; + service_count + &quot; services&quot;); </span><br><span class="line"> </span><br><span class="line">                    services.forEach(service &#x3D;&gt; </span><br><span class="line">                    &#123;     </span><br><span class="line">                        if (service.uuid &#x3D;&#x3D; ACCELEROMETER_SERVICE)</span><br><span class="line">                        &#123;      </span><br><span class="line">                            has_accelerometer_service &#x3D; true;    </span><br><span class="line">                        &#125;     </span><br><span class="line">                        if (service.uuid &#x3D;&#x3D; LED_SERVICE) </span><br><span class="line">                        &#123;      </span><br><span class="line">                            has_led_service &#x3D; true;     </span><br><span class="line">                        &#125;  </span><br><span class="line">                        if (service.uuid &#x3D;&#x3D; TEMPERATURE_SERVICE) </span><br><span class="line">                        &#123;      </span><br><span class="line">                            has_temperature_serivce &#x3D; true;     </span><br><span class="line">                        &#125; </span><br><span class="line">                        if (service.uuid &#x3D;&#x3D; DEVICE_INFORMATION_SERVICE) </span><br><span class="line">                        &#123;      </span><br><span class="line">                            has_device_information_service &#x3D; true;     </span><br><span class="line">                        &#125; </span><br><span class="line">                        console.log(&#39;Getting Characteristics for service &#39; + service.uuid);     </span><br><span class="line">                        service.getCharacteristics()</span><br><span class="line">                        .then(characteristics &#x3D;&gt; </span><br><span class="line">                        &#123;      </span><br><span class="line">                            console.log(&#39;&gt; Service: &#39; + service.uuid);      </span><br><span class="line">                            services_discovered++;     </span><br><span class="line">                            characteristics_discovered &#x3D; 0;      </span><br><span class="line">                            characteristic_count &#x3D; characteristics.length;      </span><br><span class="line">                            characteristics.forEach(characteristic &#x3D;&gt; </span><br><span class="line">                            &#123;       </span><br><span class="line">                                characteristics_discovered++;       </span><br><span class="line">                                console.log(&#39;&gt;&gt; Characteristic: &#39; + characteristic.uuid);       </span><br><span class="line">                                if (characteristic.uuid &#x3D;&#x3D; ACCELEROMETER_DATA)</span><br><span class="line">                                &#123;        </span><br><span class="line">                                    accelerometer_data &#x3D; characteristic;        </span><br><span class="line">                                    has_accelerometer_data &#x3D; true;       </span><br><span class="line">                                &#125;       </span><br><span class="line">                                if (characteristic.uuid &#x3D;&#x3D; LED_MATRIX_STATE) </span><br><span class="line">                                &#123;        </span><br><span class="line">                                    led_matrix_state &#x3D; characteristic;        </span><br><span class="line">                                    has_led_matrix_state &#x3D; true;       </span><br><span class="line">                                &#125;    </span><br><span class="line">                                if (characteristic.uuid &#x3D;&#x3D; TEMPERATURE) </span><br><span class="line">                                &#123;        </span><br><span class="line">                                    temperature &#x3D; characteristic;        </span><br><span class="line">                                    has_temperature &#x3D; true;       </span><br><span class="line">                                &#125;  </span><br><span class="line">                                if (characteristic.uuid &#x3D;&#x3D; MODEL_NUMBER_STRING) </span><br><span class="line">                                &#123;        </span><br><span class="line">                                    model_number_string &#x3D; characteristic;        </span><br><span class="line">                                    has_model_name_string &#x3D; true;       </span><br><span class="line">                                &#125;  </span><br><span class="line">                                if (services_discovered &#x3D;&#x3D; service_count &amp;&amp; characteristics_discovered &#x3D;&#x3D; characteristic_count) </span><br><span class="line">                                &#123;        </span><br><span class="line">                                    console.log(&quot;FINISHED DISCOVERY&quot;); </span><br><span class="line">                                    setDiscoveryStatus(true);       </span><br><span class="line">                                    &#x2F;&#x2F;setDiscoveryStatus(true);                  </span><br><span class="line">                                &#125;      </span><br><span class="line">                            &#125;);     </span><br><span class="line">                        &#125;);    </span><br><span class="line">                    &#125;);  </span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        &lt;&#x2F;script&gt;</span><br><span class="line">    &lt;&#x2F;head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;h2&gt;</span><br><span class="line">            Status    &lt;!-- 显示蓝牙状态 --&gt;</span><br><span class="line">        &lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;table border&#x3D;&quot;1&quot;&gt; </span><br><span class="line">            &lt;tr&gt;        &lt;!--表格的第一行 --&gt;</span><br><span class="line">                &lt;td&gt;     &lt;b&gt;Connected&lt;&#x2F;b&gt;       &lt;&#x2F;td&gt; </span><br><span class="line">                &lt;td&gt;     &lt;b&gt;Service Discovery Completed&lt;&#x2F;b&gt;       &lt;&#x2F;td&gt;      </span><br><span class="line">            &lt;&#x2F;tr&gt;</span><br><span class="line">            &lt;tr&gt;        &lt;!--表格的第二行 --&gt;</span><br><span class="line">                &lt;td id&#x3D;&quot;status_connected&quot;&gt; false &lt;&#x2F;td&gt; </span><br><span class="line">                &lt;td id&#x3D;&quot;status_discovered&quot;&gt; false &lt;&#x2F;td&gt; </span><br><span class="line">            &lt;&#x2F;tr&gt;  </span><br><span class="line">        &lt;&#x2F;table&gt;</span><br><span class="line">        &lt;h2&gt;</span><br><span class="line">            Device Discovery  Or Disconnect  &lt;!-- 扫描&#x2F;发现蓝牙设备 --&gt;</span><br><span class="line">        &lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;button id &#x3D; &quot;btn_scan&quot; onclick&#x3D;&quot;discoverOrdisconnectDevices()&quot;&gt;Start scan&lt;&#x2F;button&gt;  </span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure></li>
-</ul>
+<li>第二步新增函数发现服务与特性<br>a 添加变量，用来表明服务与特性是否存在。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var has_accelerometer_service &#x3D; false; </span><br><span class="line">var has_accelerometer_data &#x3D; false; </span><br><span class="line">var has_led_service &#x3D; false;</span><br><span class="line">var has_led_matrix_state &#x3D; false; </span><br><span class="line">var has_device_information_service &#x3D; false; </span><br><span class="line">var has_model_name_string &#x3D; false;</span><br></pre></td></tr></table></figure>
+b 去官方文档中获取UUID号：<br><img src="https://www.helloimg.com/images/2020/06/19/1IN3EUZ2XRT_IC6QNEB378794c2ecfa0b97.png" alt="1IN3EUZ2XRT_IC6QNEB378794c2ecfa0b97.png"><br>c 添加三个变量表示特性本身：(统计服务目前已经发现的数量,特性发现的数量,我们应该发现的数量)<br><img src="https://www.helloimg.com/images/2020/06/19/T5KJ9OTWD07ZCD251a2ba05ac5676786.png" alt="T5KJ9OTWD07ZCD251a2ba05ac5676786.png"><br>d 添加函数用来发现服务与特性，函数代码如下：<br><img src="https://www.helloimg.com/images/2020/06/19/XFR81VDNO_T0M831F1e885ef4efe3c5016.png" alt="XFR81VDNO_T0M831F1e885ef4efe3c5016.png"><br><img src="https://www.helloimg.com/images/2020/06/19/HIU03778D2TFUWA09b17d30fa32541cc.png" alt="HIU03778D2TFUWA09b17d30fa32541cc.png"><br>e  新增函数控制单元格改变：<br><img src="https://www.helloimg.com/images/2020/06/19/VEGYE7GWR099VQEO4AW985aa5635b050066f.png" alt="VEGYE7GWR099VQEO4AW985aa5635b050066f.png"></li>
+<li>添加温度特性<br>a 添加变量<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var has_temperature_serivce &#x3D; false;</span><br><span class="line">var has_temperature &#x3D; false;</span><br><span class="line">&#96;&#96;&#96; </span><br><span class="line">b 添加UUID号：</span><br></pre></td></tr></table></figure>
+TEMPERATURE_SERVICE = ‘e95d6100-251d-470a-a062-fa1922dfa9a8’;<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+TEMPERATURE = ‘e95d9250-251d-470a-a062-fa1922dfa9a8’;<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 最终结果及完整代码展示</span><br><span class="line">![288R48LVUHDNZ1UYXKZL931e6b38af00325b.png](https:&#x2F;&#x2F;www.helloimg.com&#x2F;images&#x2F;2020&#x2F;06&#x2F;19&#x2F;288R48LVUHDNZ1UYXKZL931e6b38af00325b.png)</span><br></pre></td></tr></table></figure>
 
+</li>
+</ul>
+<html>
+    <head> 
+        <script>
+        var    selected_device;    // 保存用户选择的蓝牙设备 
+        var    connected_server;    // 保存用户连接的蓝牙设备 
+        var    connected = false;     //,保存电脑蓝牙的当前连接状态
+        var    services_discovered = false; 
+
+<pre><code>    // presence of services and characteristics 
+    var has_accelerometer_service = false; 
+    var has_accelerometer_data = false; 
+    var has_led_service = false;
+    var has_led_matrix_state = false; 
+    var has_device_information_service = false; 
+    var has_model_name_string = false; 
+
+    var has_temperature_serivce = false;
+    var has_temperature = false;
+
+   // service UUIDs 
+   ACCELEROMETER_SERVICE = &apos;e95d0753-251d-470a-a062-fa1922dfa9a8&apos;; 
+   LED_SERVICE = &apos;e95dd91d-251d-470a-a062-fa1922dfa9a8&apos;; 
+   DEVICE_INFORMATION_SERVICE = &apos;0000180a-0000-1000-8000-00805f9b34fb&apos;;
+
+   TEMPERATURE_SERVICE = &apos;e95d6100-251d-470a-a062-fa1922dfa9a8&apos;;
+   // characteristic UUIDs 
+   ACCELEROMETER_DATA = &apos;e95dca4b-251d-470a-a062-fa1922dfa9a8&apos;; 
+   LED_MATRIX_STATE  = &apos;e95d7b77-251d-470a-a062-fa1922dfa9a8&apos;; 
+   MODEL_NUMBER_STRING = &apos;00002a24-0000-1000-8000-00805f9b34fb&apos;; 
+
+   TEMPERATURE = &apos;e95d9250-251d-470a-a062-fa1922dfa9a8&apos;;
+   // cached characteristics 
+    var led_matrix_state; 
+    var model_number_string;
+    var accelerometer_data; 
+    var temperature;
+
+     //
+     var service_count;
+     var services_discovered;
+     var characteristics_discovered;  
+     var characteristic_count ; 
+    function discoverOrdisconnectDevices() 
+    {
+        console.log(&quot;discoverDevicesOrDisconnect&quot;); 
+        if (!connected)
+            discoverDevices();
+        else
+        {
+            selected_device.gatt.disconnect();
+        }
+
+    }
+
+    function onDisconnected()          
+    {  
+         console.log(&quot;onDisconnected&quot;);  
+         resetUI(); 
+    }
+    function discoverDevices()
+    {
+        console.log(&quot;discoverDevices&quot;);             //console.log：控制台打印输出
+        var options = {acceptAllDevices:true,
+            optionalServices: [DEVICE_INFORMATION_SERVICE, ACCELEROMETER_SERVICE, LED_SERVICE, TEMPERATURE_SERVICE] 
+        }        //发现所有周边蓝牙设备
+        navigator.bluetooth.requestDevice(options)   //Navigator对象：包含有关浏览器的信息。
+        .then(device =&gt; {
+            console.log(&apos;&gt; Name:&apos; + device.name);
+            console.log(&apos;&gt; Id:&apos;   + device.id);
+            console.log(&apos;&gt; Connected:&apos; + device.gatt.connected);
+            selected_device = device;
+            console.log(selected_device);
+            connect();                            
+        })
+        .catch(error =&gt; {
+            alert(&apos;ERROR:&apos; +error);
+            console.log(&apos;ERROR:&apos; + error);
+            });
+    }
+
+    function connect()                             
+    {
+        console.log(&quot;connecting&quot;);
+        selected_device.gatt.connect()
+        .then(
+            function (server)        //表示连接成功
+            {
+                console.log(&quot;Connected to&quot; + server.device.id);
+                console.log(&quot;Connected=&quot; + server.connected);
+                selected_device.addEventListener( &apos;gattserverdisconnected&apos;,onDisconnected);  
+
+                connected_server = server;
+                discoverSvcsAndChars();    
+                setConnectedStatus(true);  //设置电脑蓝牙的当前连接状态
+
+            },
+            function (error)        //表示连接失败
+            {
+                console.log(&quot;ERROR:could not connct-&quot; + error);
+                alert(&quot;ERROR:could not connct-&quot; + error);
+                setConnectedStatus(false);  // 在第3课基础上添加的函数,设置电脑蓝牙的当前连接状态
+            }
+        );
+    }
+
+    function setConnectedStatus(status)  //设置电脑蓝牙的当前连接状态
+    {
+        connected = status;
+        document.getElementById(&apos;status_connected&apos;).innerHTML = status;
+        if (status == true) 
+        {   
+            document.getElementById(&apos;btn_scan&apos;).innerHTML = &quot;Disconnect&quot;; 
+        } 
+        else 
+        {   
+            document.getElementById(&apos;btn_scan&apos;).innerHTML = &quot;Discover Devices&quot;;  
+        }
+    }
+
+    function setDiscoveryStatus(status)
+     {  
+         services_discovered = status; 
+         document.getElementById(&apos;status_discovered&apos;).innerHTML = status;
+     }
+
+    function resetUI()     
+    {
+        setConnectedStatus(false);
+        setDiscoveryStatus(false);   
+    }
+
+    function discoverSvcsAndChars()    
+    {  
+        console.log(&quot;discoverSvcsAndChars server=&quot; + connected_server); 
+        connected_server.getPrimaryServices()
+        .then(services =&gt; 
+        {    
+                has_accelerometer_service = false;    
+                has_led_service = false; 
+                has_temperature_serivce = false;
+                has_device_information_service = false; 
+                services_discovered = 0;    
+                service_count = services.length;    
+                console.log(&quot;Got &quot; + service_count + &quot; services&quot;); 
+
+                services.forEach(service =&gt; 
+                {     
+                    if (service.uuid == ACCELEROMETER_SERVICE)
+                    {      
+                        has_accelerometer_service = true;    
+                    }     
+                    if (service.uuid == LED_SERVICE) 
+                    {      
+                        has_led_service = true;     
+                    }  
+                    if (service.uuid == TEMPERATURE_SERVICE) 
+                    {      
+                        has_temperature_serivce = true;     
+                    } 
+                    if (service.uuid == DEVICE_INFORMATION_SERVICE) 
+                    {      
+                        has_device_information_service = true;     
+                    } 
+                    console.log(&apos;Getting Characteristics for service &apos; + service.uuid);     
+                    service.getCharacteristics()
+                    .then(characteristics =&gt; 
+                    {      
+                        console.log(&apos;&gt; Service: &apos; + service.uuid);      
+                        services_discovered++;     
+                        characteristics_discovered = 0;      
+                        characteristic_count = characteristics.length;      
+                        characteristics.forEach(characteristic =&gt; 
+                        {       
+                            characteristics_discovered++;       
+                            console.log(&apos;&gt;&gt; Characteristic: &apos; + characteristic.uuid);       
+                            if (characteristic.uuid == ACCELEROMETER_DATA)
+                            {        
+                                accelerometer_data = characteristic;        
+                                has_accelerometer_data = true;       
+                            }       
+                            if (characteristic.uuid == LED_MATRIX_STATE) 
+                            {        
+                                led_matrix_state = characteristic;        
+                                has_led_matrix_state = true;       
+                            }    
+                            if (characteristic.uuid == TEMPERATURE) 
+                            {        
+                                temperature = characteristic;        
+                                has_temperature = true;       
+                            }  
+                            if (characteristic.uuid == MODEL_NUMBER_STRING) 
+                            {        
+                                model_number_string = characteristic;        
+                                has_model_name_string = true;       
+                            }  
+                            if (services_discovered == service_count &amp;&amp; characteristics_discovered == characteristic_count) 
+                            {        
+                                console.log(&quot;FINISHED DISCOVERY&quot;); 
+                                setDiscoveryStatus(true);       
+                                //setDiscoveryStatus(true);                  
+                            }      
+                        });     
+                    });    
+                });  
+        });
+    }
+
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;
+        Status    &lt;!-- 显示蓝牙状态 --&gt;
+    &lt;/h2&gt;
+    &lt;table border=&quot;1&quot;&gt; 
+        &lt;tr&gt;        &lt;!--表格的第一行 --&gt;
+            &lt;td&gt;     &lt;b&gt;Connected&lt;/b&gt;       &lt;/td&gt; 
+            &lt;td&gt;     &lt;b&gt;Service Discovery Completed&lt;/b&gt;       &lt;/td&gt;      
+        &lt;/tr&gt;
+        &lt;tr&gt;        &lt;!--表格的第二行 --&gt;
+            &lt;td id=&quot;status_connected&quot;&gt; false &lt;/td&gt; 
+            &lt;td id=&quot;status_discovered&quot;&gt; false &lt;/td&gt; 
+        &lt;/tr&gt;  
+    &lt;/table&gt;
+    &lt;h2&gt;
+        Device Discovery  Or Disconnect  &lt;!-- 扫描/发现蓝牙设备 --&gt;
+    &lt;/h2&gt;
+    &lt;button id = &quot;btn_scan&quot; onclick=&quot;discoverOrdisconnectDevices()&quot;&gt;Start scan&lt;/button&gt;  
+&lt;/body&gt;</code></pre></html>
+```
     </div>
 
     
