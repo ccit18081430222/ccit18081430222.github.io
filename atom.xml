@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://青青的本丸.github.io/"/>
-  <updated>2020-06-19T08:02:47.598Z</updated>
+  <updated>2020-06-21T08:27:10.252Z</updated>
   <id>https://青青的本丸.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>服务特性</title>
+    <title>BBC的读写特性</title>
+    <link href="https://青青的本丸.github.io/2020/06/21/BBC%E7%9A%84%E8%AF%BB%E5%86%99%E7%89%B9%E6%80%A7/"/>
+    <id>https://青青的本丸.github.io/2020/06/21/BBC%E7%9A%84%E8%AF%BB%E5%86%99%E7%89%B9%E6%80%A7/</id>
+    <published>2020-06-21T08:06:41.000Z</published>
+    <updated>2020-06-21T08:27:10.252Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;###BBC的读写特性意思就是读取BBC板子的名字&lt;br&gt;##如何添加读写特性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;添加一个用来读取数据的函数，代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>BBC服务特性</title>
     <link href="https://青青的本丸.github.io/2020/06/19/%E6%9C%8D%E5%8A%A1%E7%89%B9%E6%80%A7/"/>
     <id>https://青青的本丸.github.io/2020/06/19/%E6%9C%8D%E5%8A%A1%E7%89%B9%E6%80%A7/</id>
     <published>2020-06-19T06:48:18.000Z</published>
-    <updated>2020-06-19T08:02:47.598Z</updated>
+    <updated>2020-06-21T08:10:46.778Z</updated>
     
     <summary type="html">
     
