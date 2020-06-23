@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://青青的本丸.github.io/"/>
-  <updated>2020-06-21T09:32:38.547Z</updated>
+  <updated>2020-06-23T07:38:19.368Z</updated>
   <id>https://青青的本丸.github.io/</id>
   
   <author>
@@ -17,20 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>BBC的读写特性</title>
-    <link href="https://青青的本丸.github.io/2020/06/21/BBC%E7%9A%84%E8%AF%BB%E5%86%99%E7%89%B9%E6%80%A7/"/>
-    <id>https://青青的本丸.github.io/2020/06/21/BBC%E7%9A%84%E8%AF%BB%E5%86%99%E7%89%B9%E6%80%A7/</id>
-    <published>2020-06-21T08:06:41.000Z</published>
-    <updated>2020-06-21T09:32:38.547Z</updated>
+    <title>启用通知</title>
+    <link href="https://青青的本丸.github.io/2020/06/23/%E5%90%AF%E7%94%A8%E9%80%9A%E7%9F%A5/"/>
+    <id>https://青青的本丸.github.io/2020/06/23/%E5%90%AF%E7%94%A8%E9%80%9A%E7%9F%A5/</id>
+    <published>2020-06-23T06:55:45.000Z</published>
+    <updated>2020-06-23T07:38:19.368Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;###BBC的读写特性意思就是读取BBC板子的名字&lt;br&gt;##如何添加读写特性&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;添加一个用来读取数据的函数，代码如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut
+        &lt;h2 id=&quot;显示加速度计得三轴值&quot;&gt;&lt;a href=&quot;#显示加速度计得三轴值&quot; class=&quot;headerlink&quot; title=&quot;显示加速度计得三轴值&quot;&gt;&lt;/a&gt;显示加速度计得三轴值&lt;/h2&gt;&lt;p&gt;在这里要用到加速度计的服务及其特性,之前添加的特性包含加速度特性，在此不做过
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>BBC的读写特性</title>
+    <link href="https://青青的本丸.github.io/2020/06/21/BBC%E7%9A%84%E8%AF%BB%E5%86%99%E7%89%B9%E6%80%A7/"/>
+    <id>https://青青的本丸.github.io/2020/06/21/BBC%E7%9A%84%E8%AF%BB%E5%86%99%E7%89%B9%E6%80%A7/</id>
+    <published>2020-06-21T08:06:41.000Z</published>
+    <updated>2020-06-23T06:58:25.542Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;BBC的读写特性意思就是读取BBC板子的名字&quot;&gt;&lt;a href=&quot;#BBC的读写特性意思就是读取BBC板子的名字&quot; class=&quot;headerlink&quot; title=&quot;BBC的读写特性意思就是读取BBC板子的名字&quot;&gt;&lt;/a&gt;BBC的读写特性意思就是读取BBC板子的
       
     
     </summary>
@@ -44,13 +61,13 @@
     <link href="https://青青的本丸.github.io/2020/06/19/%E6%9C%8D%E5%8A%A1%E7%89%B9%E6%80%A7/"/>
     <id>https://青青的本丸.github.io/2020/06/19/%E6%9C%8D%E5%8A%A1%E7%89%B9%E6%80%A7/</id>
     <published>2020-06-19T06:48:18.000Z</published>
-    <updated>2020-06-21T08:29:17.103Z</updated>
+    <updated>2020-06-23T06:58:54.435Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;##如何从源码的角度实现服务与特性&lt;br&gt;##目标实现三个特性&lt;br&gt;&lt;img src=&quot;https://www.helloimg.com/images/2020/06/19/06C384B7ACH3MZ1I24214c6c6ab0c907.png&quot; alt=&quot;06C384
+        &lt;h2 id=&quot;如何从源码的角度实现服务与特性&quot;&gt;&lt;a href=&quot;#如何从源码的角度实现服务与特性&quot; class=&quot;headerlink&quot; title=&quot;如何从源码的角度实现服务与特性&quot;&gt;&lt;/a&gt;如何从源码的角度实现服务与特性&lt;/h2&gt;&lt;h2 id=&quot;目标实现三个特性&quot;&gt;&lt;a 
       
     
     </summary>
